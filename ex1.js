@@ -48,19 +48,35 @@ const flightReservation = {
   gate: "B15",
 };
 
-console.log(flightReservation);
+//console.log(flightReservation);
 
 // Observa el resultado de la consola. Escribe un console.log para cada uno de los apartados
 
 // 1. Muestra el número de vuelo
 
+  console.log(`Número de vuelo: ${flightReservation.flightNumber}`);
+
 // 2. Muestra el nombre de la aerolínea
+
+  console.log(`Nombre aerolínia: ${flightReservation.airline}`);
 
 // 3. Muestra TODOS los datos sobre la fecha de salida del vuelo
 
+//// Notación del punto
+  //console.log(flightReservation.departure.airport, flightReservation.departure.date, flightReservation.departure.time);
+
+////Con un for que recorre índice (propiedad) y valor
+  for(let departureData in flightReservation.departure){
+    console.log(`${departureData}: ${flightReservation.departure[departureData]}`);
+  };
+
 // 4. Muestra únicamente el nombre aeropuerto de llegada
 
+  console.log(`Aeropuesto de llegada: ${flightReservation.arrival.airport}`);
+
 // 5. Muestra únicamente el peso del equipaje facturado
+
+  console.log(`Peso equipaje facturado: ${flightReservation.baggage.checked.totalWeight}`)
 
 // 6. Muestra la SUMA del peso del equipaje facturado y el equipaje de cabina
 
