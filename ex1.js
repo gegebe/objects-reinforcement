@@ -80,4 +80,12 @@ const flightReservation = {
 
 // 6. Muestra la SUMA del peso del equipaje facturado y el equipaje de cabina
 
+  let checkedBaggage = flightReservation.baggage.checked.totalWeight;
+  let carryOnBaggage = flightReservation.baggage.carryOn.totalWeight;
+  //console.log(checkedBaggage,carryOnBaggage);
+
+  console.log(`Peso total del equipaje: ${checkedBaggage + carryOnBaggage}`);
+
 // 7. Usa el método includes para indicar si este vuelo dispone del servicio de Wi-Fi o no (true o false)
+
+  console.log(flightReservation.inFlightServices.includes("Wi-Fi"))
