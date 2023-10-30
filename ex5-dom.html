@@ -68,11 +68,11 @@
     
     // 1. Guarda en una variable  el valor del campo de First Name
 
-    let userFirstName = document.getElementByName("first")[0].value;
+    let userFirstName = document.getElementsByName("first")[0];
 
     //  2. Guarda en otra variable el valor del campo de Last Name
 
-    let userLastName = document.getElementByName("last")[0].value;
+    let userLastName = document.getElementsByName("last")[0];
 
     // 3. Modifica el valor del último input con un mensaje saludando a la persona. Algo así como "Hello First Name Second Name!";
 
@@ -80,16 +80,16 @@
 
     // Esto es un <form>. Tenedlo en cuenta a la hora de añadir un listener ! Ayuda: https://desarrolloweb.com/faq/explicaciones-detalladas-sobre-el-metodo-preventdefault-de-javascript
 
-    let greetings = document.getElementByName("greetings");
-    let button = document.querySelector("button");
+    let greetings = document.getElementsByName("greetings")[0];
+    let form = document.querySelector("form");
 
     function GreetUser(){
-        return `Hello ${userFirstName} ${userLastName}!`
+        greetings.value = `Hello ${userFirstName.value} ${userLastName.value}!`
     }
 
-    button.addEventListener("click", function(evento) {
+    form.addEventListener("submit", function(evento) {
         evento.preventDefault();
-        GreetUser(evento);
+        GreetUser();
     });
 
 </script>
